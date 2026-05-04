@@ -1,0 +1,26 @@
+{
+    "is_setup_done": true,
+    "admin": {
+        "name": "sitanshu",
+        "username": "sitanshu",
+        "password": "fir apna password"
+    },
+    "budget_plans": {
+        "Student": {
+            "min": 0,
+            "max": 0
+        },
+        "Family": {
+            "min": 0,
+            "max": 0
+        },
+        "Luxury": {
+            "min": 0,
+            "max": 0
+        },
+        "Corporate": {
+            "min": 0,
+            "max": 0
+        }
+    }
+}

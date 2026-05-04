@@ -1,0 +1,11 @@
+{
+    "users": [
+        {
+            "name": "Sitanshu",
+            "email": "sit@gmail.com",
+            "type": "Student",
+            "budget": 2000,
+            "days": 5
+        }
+    ]
+}

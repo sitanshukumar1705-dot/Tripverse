@@ -1,0 +1,11 @@
+{
+    "platform_name": "TripVerse",
+    "default_language": "English",
+    "available_languages": [
+        "English", "Hindi", "Tamil", "Telugu",
+        "Marathi", "Bengali", "Gujarati", "Kannada",
+        "Malayalam", "Punjabi", "Urdu", "Sanskrit"
+    ],
+    "currency": "INR",
+    "is_active": true
+}
