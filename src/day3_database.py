@@ -8,7 +8,7 @@ from datetime import datetime
 # =====================================
 
 def connect_db():
-    conn = sqlite3.connect("tripverse.db")
+    conn = sqlite3.connect("database/tripverse.db")
     return conn
 
 # =====================================
