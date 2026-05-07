@@ -13,13 +13,13 @@ import pickle
 import os
 
 print("=" * 50)
-print("  🤖 TRIPVERSE - DAY 6 - ML MODEL")
+print("  TRIPVERSE - DAY 6 - ML MODEL")
 print("=" * 50)
 
 # =====================================
 # STEP 1 - Preppearing Traing Dataset
 # =====================================
-print("\n📊 Step 1: Preparing Training Dataset...")
+print("\n Step 1: Preparing Training Dataset...")
 
 # TripVerse ke liye synthetic travel data banate hain
 np.random.seed(42)
@@ -67,14 +67,14 @@ for i in range(n):
 data['total_price'] = prices
 df = pd.DataFrame(data)
 
-print(f"✅ Dataset ready: {len(df)} records")
+print(f" Dataset ready: {len(df)} records")
 print(f"   Price range: Rs.{df['total_price'].min():,.0f} - Rs.{df['total_price'].max():,.0f}")
 print(f"   Average price: Rs.{df['total_price'].mean():,.0f}")
 
 # =====================================
 # STEP 2 - DATA ENCODE KARO
 # =====================================
-print("\n🔄 Step 2: Data Encoding...")
+print("\n Step 2: Data Encoding...")
 
 df_encoded = df.copy()
 le = LabelEncoder()
@@ -83,12 +83,12 @@ le = LabelEncoder()
 for col in ['category', 'season', 'user_type', 'state']:
     df_encoded[col] = le.fit_transform(df_encoded[col])
 
-print("✅ Categorical data converted to numerical format!")
+print(" Categorical data converted to numerical format!")
 
 # =====================================
 # STEP 3 - TRAIN/TEST SPLIT
 # =====================================
-print("\n✂️  Step 3: Splitting Data into Train & Test Sets...")
+print("\n  Step 3: Splitting Data into Train & Test Sets...")
 
 X = df_encoded.drop('total_price', axis=1)
 y = df_encoded['total_price']
@@ -97,39 +97,39 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
 
-print(f"✅ Training data: {len(X_train)} records")
+print(f" Training data: {len(X_train)} records")
 print(f"   Testing data:  {len(X_test)} records")
 
 # =====================================
 # STEP 4 - MODEL TRAIN KARO
 # =====================================
-print("\n🧠 Step 4: Training Linear Regression Model...")
+print("\n Step 4: Training Linear Regression Model...")
 
 model = LinearRegression()
 model.fit(X_train, y_train)
 
-print("✅ Model trained successfully!")
+print(" Model trained successfully!")
 
 # =====================================
 # STEP 5 - MODEL EVALUATE KARO
 # =====================================
-print("\n📈 Step 5: Evaluating Model Performance...")
+print("\n Step 5: Evaluating Model Performance...")
 
 y_pred = model.predict(X_test)
 
 mae = mean_absolute_error(y_test, y_pred)
 r2  = r2_score(y_test, y_pred)
 
-print(f"✅ Model Performance:")
+print(f" Model Performance:")
 print(f"   R² Score (Accuracy): {r2:.2%}")
 print(f"   Mean Absolute Error: Rs.{mae:,.0f}")
 
 if r2 >= 0.8:
-    print("   🟢 Excellent Model!")
+    print("    Excellent Model!")
 elif r2 >= 0.6:
-    print("   🟡 Good Model!")
+    print("    Good Model!")
 else:
-    print("   🔴 Needs Improvement!")
+    print("    Needs Improvement!")
 
 # =====================================
 # STEP 6 - PRICE PREDICTOR FUNCTION
@@ -157,7 +157,7 @@ def predict_price(category, season, user_type, days, num_people,
     return max(price, 1000)
 
 # Test predictions
-print("\n💰 Sample Price Predictions:")
+print("\n Sample Price Predictions:")
 print("-" * 45)
 
 trips = [
@@ -170,8 +170,8 @@ trips = [
 
 for user, dest, cat, season, days, people, flight, hotel in trips:
     price = predict_price(cat, season, user, days, people, flight, hotel)
-    flight_txt = "✈️ Flight" if flight else "🚌 Bus"
-    hotel_txt  = "🏨 Hotel" if hotel else "🏕️ Hostel"
+    flight_txt = " Flight" if flight else " Bus"
+    hotel_txt  = " Hotel" if hotel else " Hostel"
     print(f"  {user:8} → {dest:10} {days} days {flight_txt} {hotel_txt}")
     print(f"            Predicted: Rs.{price:,.0f}")
     print()
@@ -179,7 +179,7 @@ for user, dest, cat, season, days, people, flight, hotel in trips:
 # =====================================
 # STEP 7 - VISUALIZATION
 # =====================================
-print("\n📊 Step 7: Generating Visualization Charts...")
+print("\n Step 7: Generating Visualization Charts...")
 
 if not os.path.exists("charts"):
     os.makedirs("charts")
@@ -208,7 +208,7 @@ plt.tight_layout()
 plt.savefig('charts/07_feature_importance.png', dpi=150)
 plt.close()
 
-print("✅ Charts saved!")
+print(" Charts saved!")
 
 # =====================================
 # STEP 8 - MODEL SAVE KARO
@@ -219,11 +219,11 @@ if not os.path.exists("models"):
 with open("models/price_model.pkl", "wb") as f:
     pickle.dump(model, f)
 
-print("✅ Model saved: models/price_model.pkl")
+print(" Model saved: models/price_model.pkl")
 
 print("\n" + "=" * 50)
 print("  🎉 DAY 6 COMPLETE!")
 print("=" * 50)
 print(f"\n  Model Accuracy: {r2:.2%}")
 print(f"  Price Error:    Rs.{mae:,.0f}")
-print("\n  ✅ TripVerse Price Predictor Ready!")
+print("\n   TripVerse Price Predictor Ready!")
