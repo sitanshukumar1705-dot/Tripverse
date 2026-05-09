@@ -57,17 +57,11 @@ TripVerse/
 | Day | Task | Status |
 |-----|------|--------|
 | Day 1 | Python Basics | ✅ |
-| Day 2 | Multilingual System | ✅ |
-| Day 3 | SQL Database | ✅ |
-| Day 4-30 | Coming soon... | 🔄 |
-
----
-
-## 👨‍💻 Developer
-
-**Sitanshu** — Data Science 30 Day Challenge
-
----
-
-*Built with ❤️ for India 🇮🇳*
-
+| Day 2 | Multilingual System - 14 Indian Languages | ✅ |
+| Day 3 | SQL Database Setup | ✅ |
+| Day 4 | Advanced Data Analysis | ✅ |
+| Day 5 | Data Visualization - 5 Charts | ✅ |
+| Day 6 | ML Price Prediction Model | ✅ |
+| Day 7 | Complete Database - 8 Tables | ✅ |
+| Day 8 | Recommendation System | ✅ |
+| Day 9-30 | Coming soon... | 🔄 |
