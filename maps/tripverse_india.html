@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0b7ee92c2ab59dc1580352795a43cdcc {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_0b7ee92c2ab59dc1580352795a43cdcc" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0b7ee92c2ab59dc1580352795a43cdcc = L.map(
+                "map_0b7ee92c2ab59dc1580352795a43cdcc",
+                {
+                    center: [20.5937, 78.9629],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_56b7570c6b7a0985df2fbe2f3099ec5d = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_56b7570c6b7a0985df2fbe2f3099ec5d.addTo(map_0b7ee92c2ab59dc1580352795a43cdcc);
+        
+    
+            var marker_78b1b76866d5572e3c0539ac3c56ba9b = L.marker(
+                [26.9124, 75.7873],
+                {
+}
+            ).addTo(map_0b7ee92c2ab59dc1580352795a43cdcc);
+        
+    
+            var icon_2cd8640d227e28df42052295ba5c50fe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9629af64f825deaf62ad8ee946e13fe4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d8cde028cfa61df6316c43cfb875ec37 = $(`<div id="html_d8cde028cfa61df6316c43cfb875ec37" style="width: 100.0%; height: 100.0%;">     <div style='width:200px'>         <h4>Jaipur</h4>         <b>State:</b> Rajasthan<br>         <b>Category:</b> Heritage<br>         <b>Avg Budget:</b> Rs.8,000<br>     </div>     </div>`)[0];
+                popup_9629af64f825deaf62ad8ee946e13fe4.setContent(html_d8cde028cfa61df6316c43cfb875ec37);
+            
+        
+
+        marker_78b1b76866d5572e3c0539ac3c56ba9b.bindPopup(popup_9629af64f825deaf62ad8ee946e13fe4)
+        ;
+
+        
+    
+    
+            marker_78b1b76866d5572e3c0539ac3c56ba9b.bindTooltip(
+                `<div>
+                     Jaipur - Rs.8,000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_78b1b76866d5572e3c0539ac3c56ba9b.setIcon(icon_2cd8640d227e28df42052295ba5c50fe);
+            
+    
+            var marker_06f97a2bb1ab8f177c92840a06097d4f = L.marker(
+                [15.2993, 74.124],
+                {
+}
+            ).addTo(map_0b7ee92c2ab59dc1580352795a43cdcc);
+        
+    
+            var icon_b6a6234108f5bcaf5aa6292834caf2f9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cc75564ce9c7d9a178f605df7fbe2505 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_63c3fd982ea5298f913367c169302df0 = $(`<div id="html_63c3fd982ea5298f913367c169302df0" style="width: 100.0%; height: 100.0%;">     <div style='width:200px'>         <h4>Goa</h4>         <b>State:</b> Goa<br>         <b>Category:</b> Beach<br>         <b>Avg Budget:</b> Rs.12,000<br>     </div>     </div>`)[0];
+                popup_cc75564ce9c7d9a178f605df7fbe2505.setContent(html_63c3fd982ea5298f913367c169302df0);
+            
+        
+
+        marker_06f97a2bb1ab8f177c92840a06097d4f.bindPopup(popup_cc75564ce9c7d9a178f605df7fbe2505)
+        ;
+
+        
+    
+    
+            marker_06f97a2bb1ab8f177c92840a06097d4f.bindTooltip(
+                `<div>
+                     Goa - Rs.12,000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_06f97a2bb1ab8f177c92840a06097d4f.setIcon(icon_b6a6234108f5bcaf5aa6292834caf2f9);
+            
+    
+            var marker_04355643bb65517e624865c57a6c0792 = L.marker(
+                [32.2396, 77.1887],
+                {
+}
+            ).addTo(map_0b7ee92c2ab59dc1580352795a43cdcc);
+        
+    
+            var icon_26bee0e23a2168f150280b0db56ab02d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2d7e7fc2245cb2bbacbdd200102be7b3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_91f2e5f499572956073ae6065e359fc1 = $(`<div id="html_91f2e5f499572956073ae6065e359fc1" style="width: 100.0%; height: 100.0%;">     <div style='width:200px'>         <h4>Manali</h4>         <b>State:</b> Himachal Pradesh<br>         <b>Category:</b> Adventure<br>         <b>Avg Budget:</b> Rs.10,000<br>     </div>     </div>`)[0];
+                popup_2d7e7fc2245cb2bbacbdd200102be7b3.setContent(html_91f2e5f499572956073ae6065e359fc1);
+            
+        
+
+        marker_04355643bb65517e624865c57a6c0792.bindPopup(popup_2d7e7fc2245cb2bbacbdd200102be7b3)
+        ;
+
+        
+    
+    
+            marker_04355643bb65517e624865c57a6c0792.bindTooltip(
+                `<div>
+                     Manali - Rs.10,000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_04355643bb65517e624865c57a6c0792.setIcon(icon_26bee0e23a2168f150280b0db56ab02d);
+            
+    
+            var marker_e93facb1117cb7f9eb0297d18dc6715b = L.marker(
+                [10.8505, 76.2711],
+                {
+}
+            ).addTo(map_0b7ee92c2ab59dc1580352795a43cdcc);
+        
+    
+            var icon_15f2960f898e1dc8f0883a6fb3df905c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3351c9f3a3b63f9bcaf850ff2d55f6ec = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_40e1dfdeb18e6c6b1305cf7a75ea0a0a = $(`<div id="html_40e1dfdeb18e6c6b1305cf7a75ea0a0a" style="width: 100.0%; height: 100.0%;">     <div style='width:200px'>         <h4>Kerala</h4>         <b>State:</b> Kerala<br>         <b>Category:</b> Nature<br>         <b>Avg Budget:</b> Rs.15,000<br>     </div>     </div>`)[0];
+                popup_3351c9f3a3b63f9bcaf850ff2d55f6ec.setContent(html_40e1dfdeb18e6c6b1305cf7a75ea0a0a);
+            
+        
+
+        marker_e93facb1117cb7f9eb0297d18dc6715b.bindPopup(popup_3351c9f3a3b63f9bcaf850ff2d55f6ec)
+        ;
+
+        
+    
+    
+            marker_e93facb1117cb7f9eb0297d18dc6715b.bindTooltip(
+                `<div>
+                     Kerala - Rs.15,000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e93facb1117cb7f9eb0297d18dc6715b.setIcon(icon_15f2960f898e1dc8f0883a6fb3df905c);
+            
+    
+            var marker_dbd5e04add62f6da84f4b956340bf556 = L.marker(
+                [25.3176, 82.9739],
+                {
+}
+            ).addTo(map_0b7ee92c2ab59dc1580352795a43cdcc);
+        
+    
+            var icon_4efd49b5244caa4a30a1e7e391436280 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_44fcf771ce8077b3322fa1b6397c4265 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_be72624261b93da033d1e7a62a62ffde = $(`<div id="html_be72624261b93da033d1e7a62a62ffde" style="width: 100.0%; height: 100.0%;">     <div style='width:200px'>         <h4>Varanasi</h4>         <b>State:</b> UP<br>         <b>Category:</b> Spiritual<br>         <b>Avg Budget:</b> Rs.6,000<br>     </div>     </div>`)[0];
+                popup_44fcf771ce8077b3322fa1b6397c4265.setContent(html_be72624261b93da033d1e7a62a62ffde);
+            
+        
+
+        marker_dbd5e04add62f6da84f4b956340bf556.bindPopup(popup_44fcf771ce8077b3322fa1b6397c4265)
+        ;
+
+        
+    
+    
+            marker_dbd5e04add62f6da84f4b956340bf556.bindTooltip(
+                `<div>
+                     Varanasi - Rs.6,000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dbd5e04add62f6da84f4b956340bf556.setIcon(icon_4efd49b5244caa4a30a1e7e391436280);
+            
+    
+            var marker_e503513a039804cf2734100aa81b0169 = L.marker(
+                [34.1526, 77.5771],
+                {
+}
+            ).addTo(map_0b7ee92c2ab59dc1580352795a43cdcc);
+        
+    
+            var icon_922c013fff8bd2ac05ef8aa0010ad6f1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_85d741e060a566bf67bf665301f181fe = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f1312a30e014969a30cbd87c9e58b70d = $(`<div id="html_f1312a30e014969a30cbd87c9e58b70d" style="width: 100.0%; height: 100.0%;">     <div style='width:200px'>         <h4>Leh Ladakh</h4>         <b>State:</b> J&K<br>         <b>Category:</b> Adventure<br>         <b>Avg Budget:</b> Rs.25,000<br>     </div>     </div>`)[0];
+                popup_85d741e060a566bf67bf665301f181fe.setContent(html_f1312a30e014969a30cbd87c9e58b70d);
+            
+        
+
+        marker_e503513a039804cf2734100aa81b0169.bindPopup(popup_85d741e060a566bf67bf665301f181fe)
+        ;
+
+        
+    
+    
+            marker_e503513a039804cf2734100aa81b0169.bindTooltip(
+                `<div>
+                     Leh Ladakh - Rs.25,000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e503513a039804cf2734100aa81b0169.setIcon(icon_922c013fff8bd2ac05ef8aa0010ad6f1);
+            
+    
+            var marker_84339ad8d6df525b9531eeb9d083eca0 = L.marker(
+                [19.076, 72.8777],
+                {
+}
+            ).addTo(map_0b7ee92c2ab59dc1580352795a43cdcc);
+        
+    
+            var icon_24e559856cb71d5fa3053e5d27ff3940 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b373a895391b2d799280726d667ef075 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7d13196b0751a51f0d8e0a53c80b4733 = $(`<div id="html_7d13196b0751a51f0d8e0a53c80b4733" style="width: 100.0%; height: 100.0%;">     <div style='width:200px'>         <h4>Mumbai</h4>         <b>State:</b> Maharashtra<br>         <b>Category:</b> City<br>         <b>Avg Budget:</b> Rs.10,000<br>     </div>     </div>`)[0];
+                popup_b373a895391b2d799280726d667ef075.setContent(html_7d13196b0751a51f0d8e0a53c80b4733);
+            
+        
+
+        marker_84339ad8d6df525b9531eeb9d083eca0.bindPopup(popup_b373a895391b2d799280726d667ef075)
+        ;
+
+        
+    
+    
+            marker_84339ad8d6df525b9531eeb9d083eca0.bindTooltip(
+                `<div>
+                     Mumbai - Rs.10,000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_84339ad8d6df525b9531eeb9d083eca0.setIcon(icon_24e559856cb71d5fa3053e5d27ff3940);
+            
+    
+            var marker_20b91a1914017f2abd747795f53a80ca = L.marker(
+                [27.036, 88.2627],
+                {
+}
+            ).addTo(map_0b7ee92c2ab59dc1580352795a43cdcc);
+        
+    
+            var icon_cd7237efb711bb799812e3618c396bbf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_602b516dc9d21b085db127626e97c198 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_84898393f62b8624cdd2a773a23aea0d = $(`<div id="html_84898393f62b8624cdd2a773a23aea0d" style="width: 100.0%; height: 100.0%;">     <div style='width:200px'>         <h4>Darjeeling</h4>         <b>State:</b> West Bengal<br>         <b>Category:</b> Hills<br>         <b>Avg Budget:</b> Rs.9,000<br>     </div>     </div>`)[0];
+                popup_602b516dc9d21b085db127626e97c198.setContent(html_84898393f62b8624cdd2a773a23aea0d);
+            
+        
+
+        marker_20b91a1914017f2abd747795f53a80ca.bindPopup(popup_602b516dc9d21b085db127626e97c198)
+        ;
+
+        
+    
+    
+            marker_20b91a1914017f2abd747795f53a80ca.bindTooltip(
+                `<div>
+                     Darjeeling - Rs.9,000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_20b91a1914017f2abd747795f53a80ca.setIcon(icon_cd7237efb711bb799812e3618c396bbf);
+            
+    
+            var marker_d2d716bbf98439027d3f0457a792ad6a = L.marker(
+                [27.1767, 78.0081],
+                {
+}
+            ).addTo(map_0b7ee92c2ab59dc1580352795a43cdcc);
+        
+    
+            var icon_8c1382a03594ecc5e945684262db1dbd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bcd032ea7261c98d39dc93c4a1fc7d4b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e14ca381fd43e8c415ae8c39f90c9462 = $(`<div id="html_e14ca381fd43e8c415ae8c39f90c9462" style="width: 100.0%; height: 100.0%;">     <div style='width:200px'>         <h4>Agra</h4>         <b>State:</b> UP<br>         <b>Category:</b> Heritage<br>         <b>Avg Budget:</b> Rs.7,000<br>     </div>     </div>`)[0];
+                popup_bcd032ea7261c98d39dc93c4a1fc7d4b.setContent(html_e14ca381fd43e8c415ae8c39f90c9462);
+            
+        
+
+        marker_d2d716bbf98439027d3f0457a792ad6a.bindPopup(popup_bcd032ea7261c98d39dc93c4a1fc7d4b)
+        ;
+
+        
+    
+    
+            marker_d2d716bbf98439027d3f0457a792ad6a.bindTooltip(
+                `<div>
+                     Agra - Rs.7,000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d2d716bbf98439027d3f0457a792ad6a.setIcon(icon_8c1382a03594ecc5e945684262db1dbd);
+            
+    
+            var marker_5a9465c639b0147f3414f9c467fa500e = L.marker(
+                [11.7401, 92.6586],
+                {
+}
+            ).addTo(map_0b7ee92c2ab59dc1580352795a43cdcc);
+        
+    
+            var icon_1512a992fba0e0cb8db991939fc530f1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_07c2561b4107e282348fe583da7e0be8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a7d9d700e6cf0a66c947692abaf5e43b = $(`<div id="html_a7d9d700e6cf0a66c947692abaf5e43b" style="width: 100.0%; height: 100.0%;">     <div style='width:200px'>         <h4>Andaman</h4>         <b>State:</b> Andaman<br>         <b>Category:</b> Beach<br>         <b>Avg Budget:</b> Rs.20,000<br>     </div>     </div>`)[0];
+                popup_07c2561b4107e282348fe583da7e0be8.setContent(html_a7d9d700e6cf0a66c947692abaf5e43b);
+            
+        
+
+        marker_5a9465c639b0147f3414f9c467fa500e.bindPopup(popup_07c2561b4107e282348fe583da7e0be8)
+        ;
+
+        
+    
+    
+            marker_5a9465c639b0147f3414f9c467fa500e.bindTooltip(
+                `<div>
+                     Andaman - Rs.20,000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5a9465c639b0147f3414f9c467fa500e.setIcon(icon_1512a992fba0e0cb8db991939fc530f1);
+            
+    
+            var marker_2fab42dc408808373bf30c4ff926eadf = L.marker(
+                [28.6139, 77.209],
+                {
+}
+            ).addTo(map_0b7ee92c2ab59dc1580352795a43cdcc);
+        
+    
+            var icon_970d8dcf3f3d726eb81f4932833362a1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_302cfb65166e6fe26d330254bc891cdc = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_cca19b3dcb8822899b8d5ed704bf755a = $(`<div id="html_cca19b3dcb8822899b8d5ed704bf755a" style="width: 100.0%; height: 100.0%;">     <div style='width:200px'>         <h4>Delhi</h4>         <b>State:</b> Delhi<br>         <b>Category:</b> City<br>         <b>Avg Budget:</b> Rs.8,000<br>     </div>     </div>`)[0];
+                popup_302cfb65166e6fe26d330254bc891cdc.setContent(html_cca19b3dcb8822899b8d5ed704bf755a);
+            
+        
+
+        marker_2fab42dc408808373bf30c4ff926eadf.bindPopup(popup_302cfb65166e6fe26d330254bc891cdc)
+        ;
+
+        
+    
+    
+            marker_2fab42dc408808373bf30c4ff926eadf.bindTooltip(
+                `<div>
+                     Delhi - Rs.8,000
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2fab42dc408808373bf30c4ff926eadf.setIcon(icon_970d8dcf3f3d726eb81f4932833362a1);
+            
+    
+            var layer_control_b193870fd73355daf2fcab793590e9b2_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_56b7570c6b7a0985df2fbe2f3099ec5d,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_b193870fd73355daf2fcab793590e9b2 = L.control.layers(
+                layer_control_b193870fd73355daf2fcab793590e9b2_layers.base_layers,
+                layer_control_b193870fd73355daf2fcab793590e9b2_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_0b7ee92c2ab59dc1580352795a43cdcc);
+
+        
+</script>
+</html>
