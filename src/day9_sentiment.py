@@ -320,7 +320,7 @@ plt.close()
 print("✅ Charts saved!")
 
 # =====================================
-# STEP 10 - DATABASE MEIN SAVE KARO
+# STEP 10 - DATABASE Save
 # =====================================
 print("\n💾 Step 10: Saving to Database...")
 
